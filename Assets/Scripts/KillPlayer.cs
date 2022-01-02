@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamagePlayer : MonoBehaviour
+public class KillPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -10,7 +10,7 @@ public class DamagePlayer : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+        //  Update is called once per frame
     void Update()
     {
         
@@ -20,14 +20,7 @@ public class DamagePlayer : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            PlayerHealthController.instance.DealDamage();
-
-            // FindObjectOfType<PlayerHealthController>().DealDamage();
-
-            // Debug.Log("Hit");
-
+            LevelManager.instance.RespawnPlayer();
         }
-
     }
-
 }
